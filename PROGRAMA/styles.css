@@ -15,7 +15,7 @@ body {
 }
 /* Estilo para el logo encima del login */
 .logo-login {
-    max-width: 150px; /* Ajusta el tamaño según sea necesario */
+    max-width: 300px; /* Ajusta el tamaño según sea necesario */
     margin-bottom: 20px;
     display: block;
     margin-left: auto;
@@ -302,4 +302,29 @@ p a:hover {
     font-weight: bold;
     font-size: 24px; /* Tamaño de los números */
     color: #f1f1f1; /* Color más claro para los números */
+}
+
+/* Estilos para la sección de la encuesta */
+.encuesta-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.encuesta-section h2 {
+    color: #333;
+}
+
+/* Estilos para el formulario */
+form .form-label {
+    font-weight: 500;
+}
+
+form .btn-success {
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#mensajeExito {
+    text-align: center;
 }

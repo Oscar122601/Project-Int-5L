@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- Define el idioma del contenido como español -->
 <head>
     <meta charset="UTF-8">
+    <!-- Especifica la codificación de caracteres como UTF-8 --> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura la ventana gráfica para que el diseño sea responsive (adaptable a dispositivos móviles) --> 
     <title>Página de Login</title>
+    <!-- Define el título que aparecerá en la pestaña del navegador --> 
     <link rel="stylesheet" href="styles.css">
+    <!-- Enlaza la hoja de estilos CSS externa que dará formato a la página -->
 </head>
 <body class="login-page">
+    <!-- El cuerpo de la página comienza aquí, con la clase 'login-page' para estilo personalizado -->
     <div class="login-container">
+        <!-- Contenedor principal del formulario de login, con clase para estilos -->
         <img src="imagenes mokup/logo-removebg-preview-transformed.png" alt="Logo" class="logo-login">
+        <!-- Inserta una imagen del logo con ruta y clase 'logo-login' para aplicar estilos; el texto alternativo es 'Logo' -->
         <h1>Iniciar Sesión</h1>
+        <!-- Encabezado principal de la página, con el texto "Iniciar Sesión" -->
         <form>
+            <!-- Inicia el formulario para el login. No tiene método ni acción definida, así que no enviará datos por defecto -->
             <label for="username">Usuario:</label>
+            <!-- Etiqueta para el campo de texto del nombre de usuario. El atributo 'for' vincula la etiqueta con el campo de entrada con id 'username' -->
             <input type="text" id="username" name="username" placeholder="Ingrese su usuario">
+            <!-- Campo de entrada para el nombre de usuario, con id y nombre 'username'. El atributo 'placeholder' muestra un texto dentro del campo hasta que el usuario comience a escribir -->
             <label for="password">Contraseña:</label>
+            <!-- Etiqueta para el campo de la contraseña. Se vincula con el campo de entrada con id 'password' -->
             <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+            <!-- Campo de entrada para la contraseña, que oculta el texto al escribir (tipo 'password'). Tiene id y nombre 'password' y un texto de 'placeholder' para guiar al usuario -->
             <button type="submit">Ingresar</button>
+            <!-- Botón de envío del formulario. Al hacer clic, enviará los datos si el formulario está configurado correctamente -->
         </form>
+        <!-- Fin del formulario -->
     </div>
+    <!-- Fin del contenedor principal de login -->
 </body>
 </html>

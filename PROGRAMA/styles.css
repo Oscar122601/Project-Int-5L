@@ -176,15 +176,48 @@ p a:hover {
     background-position: 10px center;
 }
 
+/* Cambia el color de fondo del navbar a verde */
+.navbar {
+    background-color: #4CAF50; /* Un tono de verde */
+}
+
+/* Añadir un fondo blanco al logo */
 .logo {
     width: 100px;
     height: 80px;
+    background-color: white; /* Fondo blanco para que sea visible */
+    padding: 5px; /* Añade espacio alrededor del logo si es necesario */
+    border-radius: 5px; /* Opcional: suaviza los bordes del fondo del logo */
 }
 
+/* Estilos para los links de la barra de navegación */
 .navbar-nav .nav-link {
     font-size: 18px;
     margin-right: 20px;
+    color: white; /* Cambia el color del texto a blanco para mejor visibilidad */
 }
+
+/* Botones de "Configuración" y "Salir" con fondo blanco */
+.btn-outline-secondary, .btn-outline-danger {
+    background-color: white; /* Fondo blanco por defecto */
+    color: #000; /* Color del texto negro */
+    border-color: #ccc; /* Color de borde para ambos botones */
+}
+
+/* Estilo al pasar el mouse sobre el botón de "Configuración" */
+.btn-outline-secondary:hover {
+    background-color: #6c757d; /* Fondo gris al hacer hover */
+    color: white; /* Color del texto en blanco */
+    border-color: #6c757d; /* Color del borde para que coincida */
+}
+
+/* Estilo al pasar el mouse sobre el botón de "Salir" */
+.btn-outline-danger:hover {
+    background-color: #dc3545; /* Fondo rojo al hacer hover */
+    color: white; /* Color del texto en blanco */
+    border-color: #dc3545; /* Color del borde para que coincida */
+}
+
 
 .product-card {
     position: relative;

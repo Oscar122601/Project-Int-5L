@@ -1,0 +1,352 @@
+/* Estilo general para todas las páginas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; /* Color de fondo para páginas sin imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* Estilo para el logo encima del login */
+.logo-login {
+    max-width: 300px; /* Ajusta el tamaño según sea necesario */
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo específico para la página de login */
+/* Contenedor que incluye la imagen de fondo */
+.login-page {
+    position: relative;
+    background-image: url('https://media.istockphoto.com/id/525968631/es/foto/comida-sana-fondo.jpg?s=612x612&w=0&k=20&c=zmWUZ0JQ_L5l5z1AYH-K7A3OoqKMlmE1TgG5DnjC92U=');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1; /* Para que el contenido esté encima del pseudo-elemento */
+}
+
+/* Aplicamos el fondo en un pseudo-elemento ::before */
+.login-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* Usa la misma imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.5; /* Reduce la opacidad de la imagen */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
+
+/* Contenedor principal del formulario */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1.5s ease; /* Animación al cargar */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo del título */
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Estilo de los campos de entrada */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 15px 20px; /* Aumentamos el padding para los íconos */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    outline: none;
+    padding-left: 45px; /* Espacio para el ícono */
+}
+
+/* Íconos dentro de los campos de entrada */
+input[type="text"]::before, input[type="password"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888;
+}
+
+/* Efecto al hacer focus en los campos */
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #5cb85c;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(92, 184, 92, 0.2);
+}
+
+/* Botón de enviar */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+/* Texto de ayuda */
+p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Enlace de registro */
+p a {
+    color: #5cb85c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #4cae4c;
+}
+
+/* Ajustes de los íconos en los campos de texto */
+.login-container {
+    position: relative;
+}
+
+#username {
+    background-image: url('https://img.icons8.com/ios-filled/50/000000/user.png');
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+#password {
+    background-image: url('https://img.icons8.com/ios-filled/50/000000/lock-2.png');
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+/* Cambia el color de fondo del navbar a verde */
+.navbar {
+    background-color: #4CAF50; /* Un tono de verde */
+    position: fixed; /* Fija el navbar en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+/* Añadir un fondo blanco al logo */
+.logo {
+    width: 100px;
+    height: 80px;
+    background-color: white; /* Fondo blanco para que sea visible */
+    padding: 5px; /* Añade espacio alrededor del logo si es necesario */
+    border-radius: 5px; /* Opcional: suaviza los bordes del fondo del logo */
+}
+
+/* Estilos para los links de la barra de navegación */
+.navbar-nav .nav-link {
+    font-size: 18px;
+    margin-right: 20px;
+    color: white; /* Cambia el color del texto a blanco para mejor visibilidad */
+}
+
+/* Botones de "Configuración" y "Salir" con fondo blanco */
+.btn-outline-secondary, .btn-outline-danger {
+    background-color: white; /* Fondo blanco por defecto */
+    color: #000; /* Color del texto negro */
+    border-color: #ccc; /* Color de borde para ambos botones */
+}
+
+/* Estilo al pasar el mouse sobre el botón de "Configuración" */
+.btn-outline-secondary:hover {
+    background-color: #6c757d; /* Fondo gris al hacer hover */
+    color: white; /* Color del texto en blanco */
+    border-color: #6c757d; /* Color del borde para que coincida */
+}
+
+/* Estilo al pasar el mouse sobre el botón de "Salir" */
+.btn-outline-danger:hover {
+    background-color: #dc3545; /* Fondo rojo al hacer hover */
+    color: white; /* Color del texto en blanco */
+    border-color: #dc3545; /* Color del borde para que coincida */
+}
+
+/* Añadir margen al contenido para evitar que quede tapado por el navbar */
+body {
+    padding-top: 100px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden; /* Para evitar que la imagen sobresalga cuando se hace zoom */
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px; /* Establece una altura fija */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor sin distorsión */
+    transition: transform 0.3s;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+.product-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+.product-card:hover .product-info {
+    display: block;
+}
+
+.inventory-summary {
+    background-color: #4CAF50; /* Color verde */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px; /* Separación con los productos */
+    text-align: center; /* Centramos todo el texto */
+    display: flex;
+    flex-direction: column; /* Colocamos los elementos en columna */
+    align-items: center; /* Centramos los elementos horizontalmente */
+    gap: 15px; /* Espacio entre los elementos */
+    font-size: 20px; /* Tamaño de la letra */
+    transition: transform 0.3s ease-in-out; /* Animación suave */
+}
+
+.inventory-summary:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+.inventory-summary h4 {
+    font-weight: bold;
+    font-size: 28px; /* Título más grande */
+}
+
+.inventory-summary ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.inventory-summary li {
+    margin-bottom: 10px;
+    font-size: 22px; /* Tamaño más grande para los elementos */
+    display: flex;
+    justify-content: center; /* Centramos los elementos */
+    align-items: center;
+    gap: 10px; /* Espacio entre el nombre del campo y el valor */
+}
+
+/* Estilo para los valores del inventario */
+.inventory-summary li span {
+    font-weight: bold;
+    font-size: 24px; /* Tamaño de los números */
+    color: #f1f1f1; /* Color más claro para los números */
+}
+
+/* Estilos para la sección de la encuesta */
+.encuesta-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.encuesta-section h2 {
+    color: #333;
+}
+
+/* Estilos para el formulario */
+form .form-label {
+    font-weight: 500;
+}
+
+form .btn-success {
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#mensajeExito {
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
